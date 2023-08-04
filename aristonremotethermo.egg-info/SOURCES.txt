@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+aristonremotethermo/__init__.py
+aristonremotethermo/ariston.py
+aristonremotethermo.egg-info/PKG-INFO
+aristonremotethermo.egg-info/SOURCES.txt
+aristonremotethermo.egg-info/dependency_links.txt
+aristonremotethermo.egg-info/requires.txt
+aristonremotethermo.egg-info/top_level.txt
