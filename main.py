@@ -59,7 +59,7 @@ while i < 6:
         currentTimeDate = datetime.now() - relativedelta(days=1)
         dt_string = currentTimeDate.strftime("%Y/%m/%d")
 
-        countedRecords = null
+        countedRecords = 0
 
         try:
             sql = "SELECT COUNT(*) FROM historic_data WHERE date = '" + dt_string + "';"
