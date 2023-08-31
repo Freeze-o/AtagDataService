@@ -94,6 +94,7 @@ while i < 6:
         dt_string = now.strftime("%Y/%m/%d %H:%M:%S")
         print("date and time =", dt_string)
         print("The energy consumption at", dt_string, "is", energy_today['value'])
+        print("The outside temperature is " + outside_temp_value)
         print("The water temperature is " + water_temp_value)
         try:
             sql = "INSERT INTO current_data VALUES ('" + energy_today_value + "', '" + dt_string + "', '" + outside_temp_value + "', '" + water_temp_value + "');"
