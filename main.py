@@ -11,18 +11,23 @@ from dateutil.relativedelta import relativedelta
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+try:
+    load_dotenv()
 
-ApiInstance = AristonHandler(
-    username=os.getenv("API_KEY"),
-    password=os.getenv("API_SECRET"),
-    period_get_request=35,
-    period_set_request=35,
-    sensors=['ch_energy2_today',
-             'ch_energy2_yesterday',
-             'ch_flow_temperature',
-             'outside_temperature']
-)
+    ApiInstance = AristonHandler(
+        username=os.getenv("API_KEY"),
+        password=os.getenv("API_SECRET"),
+        period_get_request=35,
+        period_set_request=35,
+        sensors=['ch_energy2_today',
+                'ch_energy2_yesterday',
+                'ch_flow_temperature',
+                'outside_temperature']
+    )
+
+except Exception as e:
+    print("Error Loading ENV variables")
+    logging.error(traceback.format_exc())
 
 try:
     ApiInstance.start()
